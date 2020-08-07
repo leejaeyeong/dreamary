@@ -1,5 +1,4 @@
 {% load static %}
-
 <!doctype html>
 <html lang="en">
 
@@ -61,8 +60,6 @@
     </style>
     <!-- Custom styles for this template -->
     <link href="album.css" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/home.css' %}" >
-    
 </head>
 
 <body>
@@ -76,45 +73,16 @@
     </header>
 
     <main role="main">
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1>드리머리</h1><br>
-                <p class="lead text-muted">열정 있는 디자이너에게 받는<br>합리적인 헤어 서비스, 드리머리 </p>
-                <p>
-                    <a href="{% url 'introduce' %}" class="btn btn-danger my-2">드리머리 알아보기</a>
+        <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+            <div class="col-md-7 px-0">
+                <h1 class="display-4 font-bold">드리머리 - 헤어 서비스 O2O</h1>
+                <p class="lead my-5">"Dreamary"는 헤어샵 예비 헤어 디자이너와 일반 대중을 연결하는 O2O 플랫폼입니다. 플랫폼을 통해 일반
+                    소비자들은 예비 헤어 디자이너들의 이력, 포트폴리오, 리뷰, 별점 등을 확인하고 매우 합리적인 가격에 헤어 서비스를 받을 수
+                    있습니다. "Dreamary"는 지금까지 존재하지 않았던 컨셉의 플랫폼으로, 향후 헤어 시장의 지평에 큰 변화를 가져올 것을 확신합니다.
                 </p>
             </div>
-        </section>
-
-        <div class="album py-5 bg-light">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 shadow-sm">
-                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225"
-                                xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice"
-                                focusable="false" role="img" aria-label="Placeholder: Thumbnail">
-                                <title>Dreamary 020 헤어 서비스</title>
-                                <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-                                    dy=".3em">Thumbnail</text>
-                            </svg>
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural
-                                    lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
+
 
     </main>
 

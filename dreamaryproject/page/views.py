@@ -27,9 +27,21 @@ def create(request):
         post.description=request.POST['description']
         post.save()
 
+        return redirect('detail',post.id) # render는 요청과 함게 값을 넘겨줌 , redirect는 해당 주소로 이동만 한다.
+        
+def update(request,designer_id):
+    post=get_object_or_404(Designer,pk=designer_id)
+    if request.method=='POST':
+        if 'image' in request.FILES:
+            post.Image=request.FILES['image']
+        post.name=request.POST['name']
+        post.address=request.POST['address']
+        post.description=request.POST['description']
+        post.save()
         return redirect('detail',post.id)
-        # render는 요청과 함게 값을 넘겨줌 , redirect는 해당 주소로 이동만 한다.
-
+    else:
+        return render(request,'update.html',{'designer':post})
+        
 def delete(request,designer_id):
     post=get_object_or_404(Designer,pk=designer_id)
     post.delete()
